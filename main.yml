@@ -1,6 +1,10 @@
 ---
 # Exercise: Define Ansible Playbook
 - name: Exercise
-  hosts: localhost
+  #hosts: localhost
+  hosts: 44.203.172.77
+  become: true
+  become_method: sudo
+  become_user: root
   roles:
-    - print
+    - setup
